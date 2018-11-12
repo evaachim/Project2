@@ -41,4 +41,5 @@ addi $s0, $zero, 1089  #gets 33^2
 addi $t5, $zero, 97  #gets 64, smaller than ascii code for 'A'
 addi $t6, $zero 96  #gets 96, smaller than ascii code for 'a'
 addi $t2, $zero, 65  #loads 65 into $t2, smaller than the ascii code for '0'bne $t0, $t1, Error
+bne $t0, $t1, Error
 beq $t0, $t1, Label1

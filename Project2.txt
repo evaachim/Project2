@@ -9,3 +9,9 @@ Answer:
 Error:
 .asciiz "\n Error \n"
 .text 
+main:
+
+
+li $v0, 4
+la $a0, Ask #display question
+syscall

@@ -37,4 +37,4 @@ lb $t0, 0($a0) #checks for \n
 
 addi $t1, $zero, 10 #takes in \n
 addi $t7, $zero, 33   #gets value to multiply
-addi $s0, $zero, 1089  #gets 33^2
+addi $s0, $zero, 1089  #gets 33^2addi $s0, $zero, 1089  #gets 33^2

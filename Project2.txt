@@ -20,4 +20,7 @@ li $v0, 8 #get input
 la $a0, userInput
 li $a1, 20
 syscall
+
+li $v0, 4
+la $a0, Answer
 syscall

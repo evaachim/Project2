@@ -100,4 +100,8 @@ mflo $s2
 mult $s3, $s0
 mflo $s3
 add $s5, $s5, $s3
-mult $s0, $t7
+mult $s0, $t7mflo $s0
+mult $s4, $s0
+mflo $s4
+add $s5, $s5, $s4
+syscall

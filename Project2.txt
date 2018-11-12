@@ -68,3 +68,8 @@ L5:
     addi $s2, $s2, -55
 L6: 
     addi $s2, $s2, -87
+
+blt $s3, $t2, L7
+bge $s3, $t5, Nope
+Nope: blt $s3, $t5, L8
+bgt $s3, $t6, L9

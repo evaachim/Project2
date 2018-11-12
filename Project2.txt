@@ -43,4 +43,8 @@ addi $t6, $zero 96  #gets 96, smaller than ascii code for 'a'
 addi $t2, $zero, 65  #loads 65 into $t2, smaller than the ascii code for '0'
 
 bne $t0, $t1, Error
-beq $t0, $t1, Label1
+beq $t0, $t1, Label1beq $t0, $t1, Label1
+blt $s1, $t2, L1
+bge $s1, $t2, Else
+Else: blt $s1, $t5, L2
+bgt $s1, $t6, L3

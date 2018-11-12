@@ -82,7 +82,6 @@ blt $s4, $t2, L10
 bge $s4, $t5,Nupe
 Nupe: blt $s4, $t5, L11
 blt $s4, $t5, L11
-bgt $s4, $t6, L12L10: 
 bgt $s4, $t6, L12
 
 L10: 

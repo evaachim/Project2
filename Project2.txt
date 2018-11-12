@@ -98,6 +98,7 @@ add $s5, $zero, 0
 add $s5,$s5, $s1
 mult $s2, $t7
 mflo $s2mflo $s2
+mflo $s2
 mult $s3, $s0
 mflo $s3
 add $s5, $s5, $s3

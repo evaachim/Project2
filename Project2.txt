@@ -83,6 +83,9 @@ bge $s4, $t5,Nupe
 Nupe: blt $s4, $t5, L11
 blt $s4, $t5, L11
 bgt $s4, $t6, L12L10: 
+bgt $s4, $t6, L12
+
+L10: 
     addi $s4, $s4, -48
 L11: 
     addi $s4, $s4, -55

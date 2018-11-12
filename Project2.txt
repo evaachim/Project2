@@ -1,14 +1,11 @@
 .data
-Ask:
 
-.asciiz "\n Please Enter 4 Characters\n" 
-Answer:
+userInput: .space 20
+Error:  .asciiz "Input is too long"
 
-.asciiz "\n You Entered : \n"
-
-Error:
-.asciiz "\n Error \n"
+Prob: .asciiz "Invalid input in base-33"
 .text 
+
 main:
 
 
@@ -34,6 +31,7 @@ lb $s2 2($a0)   #third
 lb $s3 3($a0)   #second digit
 lb $s4, 4($a0)  #first digit
 lb $t0, 0($a0) #checks for \n
+
 
 addi $t1, $zero, 10 #takes in \n
 addi $t7, $zero, 33   #gets value to multiply

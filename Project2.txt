@@ -73,3 +73,7 @@ blt $s3, $t2, L7
 bge $s3, $t5, Nope
 Nope: blt $s3, $t5, L8
 bgt $s3, $t6, L9
+
+L7: addi $s3, $s3, -48
+L8: addi $s3, $s3, -55
+L9: addi $s3, $s3, -87

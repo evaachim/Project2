@@ -61,6 +61,9 @@ blt $s2, $t2, L4
 bge $s2, $t2, Other
 Other: blt $s2, $t5, L5
 bge $s2, $t6, L6L4: 
+bge $s2, $t6, L6
+
+L4: 
     addi $s2, $s2, -48
 L5: 
     addi $s2, $s2, -55

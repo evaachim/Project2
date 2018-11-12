@@ -24,3 +24,4 @@ syscall
 li $v0, 4
 la $a0, Answer
 syscall
+syscall

@@ -91,3 +91,5 @@ L11:
     addi $s4, $s4, -55
 L12: 
     addi $s4, $s4 , -87
+
+syscall

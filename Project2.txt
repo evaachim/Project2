@@ -92,6 +92,7 @@ L12:
     addi $s4, $s4 , -87
 
 syscalladd $s5, $zero, 0
+add $s5, $zero, 0
 add $s5,$s5, $s1
 mult $s2, $t7
 mflo $s2

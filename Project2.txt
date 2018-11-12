@@ -51,6 +51,6 @@ Else: blt $s1, $t5, L2
 bgt $s1, $t6, L3
 
 L1: 
-    addi $s1, $s1, -48  #subtracts 48 from $s1 which is 48 to get int  from 0 to 9     addi $s1, $s1, -48  #subtracts 48 from $s1 which is 48 to get int  from 0 to 9 
+    addi $s1, $s1, -48  #subtracts 48 from $s1 which is 48 to get int  from 0 to 9 
 L2: 
     addi $s1, $s1, -55 #gets values from 10 to 33

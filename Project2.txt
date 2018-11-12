@@ -2,3 +2,10 @@
 Ask:
 
 .asciiz "\n Please Enter 4 Characters\n" 
+Answer:
+
+.asciiz "\n You Entered : \n"
+
+Error:
+.asciiz "\n Error \n"
+.text 

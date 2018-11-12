@@ -32,6 +32,9 @@ lb $s3 3($a0)   #second digit
 lb $s4, 4($a0)  #first digit
 lb $t0, 0($a0) #checks for \n
 
+addi $t3, $zero, 87
+bgt $s1, $t3, Miu
+Miu: blt $1, $t5, Prob
 
 addi $t1, $zero, 10 #takes in \n
 addi $t7, $zero, 33   #gets value to multiply

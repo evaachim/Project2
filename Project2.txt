@@ -105,4 +105,7 @@ mflo $s0
 mult $s4, $s0
 mflo $s4
 add $s5, $s5, $s4
-syscall
+syscallsyscall
+#last system call of the program will be very last instruction
+li $v0, 10
+syscall  

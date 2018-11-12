@@ -1,0 +1,4 @@
+.data
+Ask:
+
+.asciiz "\n Please Enter 4 Characters\n" 

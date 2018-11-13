@@ -48,6 +48,11 @@ bgt $s1, $t3, Miu
 Miu: blt $s1, $t5, Prob
 bgt $s1, $st, Prob
 
+blt $s2, $v0, Prob
+bgt $s2, $t3, Miu
+Miu: blt $s2, $t5, Prob
+bgt $s2, $st, Prob
+
 bne $t0, $t1, Error
 beq $t0, $t1, Label1
 

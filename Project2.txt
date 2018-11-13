@@ -8,18 +8,9 @@ Prob: .asciiz "Invalid input in base-33"
 
 main:
 
-
-li $v0, 4
-la $a0, Ask #display question
-syscall
-
 li $v0, 8 #get input
 la $a0, userInput
 li $a1, 20
-syscall
-
-li $v0, 4
-la $a0, Answer
 syscall
 
 li $v0, 4
@@ -32,18 +23,19 @@ lb $s3 3($a0)   #second digit
 lb $s4, 4($a0)  #first digit
 lb $t0, 0($a0) #checks for \n
 
+
 addi $t1, $zero, 10 #takes in \n
 addi $t7, $zero, 33   #gets value to multiply
 addi $s0, $zero, 1089  #gets 33^2
 addi $t5, $zero, 97  #gets 64, smaller than ascii code for 'A'
 addi $t6, $zero 96  #gets 96, smaller than ascii code for 'a'
 addi $t2, $zero, 65  #loads 65 into $t2, smaller than the ascii code for '0'
-
+addi $s7, $zero, 119 #maximum
 addi $t3, $zero, 87
 addi $v0, $zero, 48
 
-blt $s1, $v0
-bgt $s1, $t3, Miu
+blt $s1, $v0, Tiu
+Tiu: bne $t1, Prob
 bgt $s1, $t3, Miu
 Miu: blt $s1, $t5, Prob
 bgt $s1, $s7, Prob
@@ -53,16 +45,16 @@ bgt $s2, $t3, Miu
 Miu: blt $s2, $t5, Prob
 bgt $s2, $s7, Prob
 
+blt $s3, $v0, Prob
+bgt $s3, $t3, Miu
+Miu: blt $s3, $t5, Prob
+bgt $s3, $s7, Prob
+
 blt $s4, $v0,Tiu
 Tiu: bne $t1, Prob
 bgt $s4, $t3, Miu
 Miu: blt $s4, $t5, Prob
 bgt $s1, $s7, Prob
-
-blt $s3, $v0, Prob
-bgt $s3, $t3, Miu
-Miu: blt $s3, $t5, Prob
-bgt $s3, $s7, Prob
 
 bne $t0, $t1, Error
 beq $t0, $t1, Label1

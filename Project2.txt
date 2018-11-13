@@ -40,6 +40,10 @@ addi $t6, $zero 96  #gets 96, smaller than ascii code for 'a'
 addi $t2, $zero, 65  #loads 65 into $t2, smaller than the ascii code for '0'
 
 addi $t3, $zero, 87
+addi $v0, $zero, 48
+
+blt $s1, $v0
+bgt $s1, $t3, Miu
 bgt $s1, $t3, Miu
 Miu: blt $s1, $t5, Prob
 bgt $s1, $st, Prob

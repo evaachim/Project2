@@ -32,12 +32,6 @@ main:
   syscall
 
 
-
-
-li $v0, 4
-la $a0, userInput
-syscall
-
 lb $s1, 1($a0)  #last digit
 lb $s2 2($a0)   #third
 lb $s3 3($a0)   #second digit

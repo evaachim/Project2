@@ -19,7 +19,6 @@ ErrorInvalid:
   syscall
   j end
 
-
 ErrorLong:
   la $a0, long
   li $v0, 4

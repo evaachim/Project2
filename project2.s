@@ -57,6 +57,7 @@ addi $a0, $a0, 1
 addi $t0, $t0, 1
 j traverse
 
+discovered: #busted empty space or input that violates limit
 
 blt $s1, $v0, Tiu
 Tiu: bne $t1, Prob

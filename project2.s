@@ -48,6 +48,9 @@ addi $t0, $t0, 0
 addi $t1, $t1, 10
 add $t2, $t2, $a0
 
+#itertates through the array
+traverse:
+lb $s2, 0($a0)
 
 blt $s1, $v0, Tiu
 Tiu: bne $t1, Prob

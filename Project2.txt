@@ -11,6 +11,16 @@ ErrorEmpty:
   syscall
   j end
 
+
+
+
+
+
+
+
+
+
+
 main:
 
 li $v0, 8 #get input

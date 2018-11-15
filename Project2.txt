@@ -4,6 +4,12 @@
   empty:   .asciiz "Input is empty."
   userInput:    .space  512
 
+.text
+ErrorEmpty:
+  la $a0, empty
+  li $v0, 4
+  syscall
+  j end
 
 main:
 

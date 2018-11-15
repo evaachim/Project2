@@ -42,6 +42,7 @@ Character:
 addi $a0, $a0, 1
 j Rid
 
+#takes care of length
 
 addi $t1, $zero, 10 #takes in \n
 addi $t7, $zero, 33   #gets value to multiply

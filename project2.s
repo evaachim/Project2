@@ -48,15 +48,6 @@ addi $t0, $t0, 0
 addi $t1, $t1, 10
 add $t2, $t2, $a0
 
-addi $t1, $zero, 10 #takes in \n
-addi $t7, $zero, 33   #gets value to multiply
-addi $s0, $zero, 1089  #gets 33^2
-addi $t5, $zero, 97  #gets 64, smaller than ascii code for 'A'
-addi $t6, $zero 96  #gets 96, smaller than ascii code for 'a'
-addi $t2, $zero, 65  #loads 65 into $t2, smaller than the ascii code for '0'
-addi $s7, $zero, 119 #maximum
-addi $t3, $zero, 87
-addi $v0, $zero, 48
 
 blt $s1, $v0, Tiu
 Tiu: bne $t1, Prob

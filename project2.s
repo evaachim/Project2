@@ -51,6 +51,8 @@ add $t2, $t2, $a0
 #itertates through the array
 traverse:
 lb $s2, 0($a0)
+beqz $s2, discovered
+beq $s2, $t1, discovered
 
 blt $s1, $v0, Tiu
 Tiu: bne $t1, Prob

@@ -6,9 +6,8 @@
 
 
 .text
-
-ErrorLong:
-  la $a0, long
+ErrorEmpty:
+  la $a0, empty
   li $v0, 4
   syscall
   j end
@@ -19,8 +18,9 @@ ErrorInvalid:
   syscall
   j end
 
-ErrorLong:
-  la $a0, long
+
+ErrorEmpty:
+  la $a0, empty
   li $v0, 4
   syscall
   j end

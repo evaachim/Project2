@@ -53,6 +53,10 @@ traverse:
 lb $s2, 0($a0)
 beqz $s2, discovered
 beq $s2, $t1, discovered
+addi $a0, $a0, 1
+addi $t0, $t0, 1
+j traverse
+
 
 blt $s1, $v0, Tiu
 Tiu: bne $t1, Prob

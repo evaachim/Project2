@@ -38,7 +38,9 @@ beq $t9, $t8, Character
 move $t8, $a0
 j length
 
-
+Character:
+addi $a0, $a0, 1
+j Rid
 
 
 addi $t1, $zero, 10 #takes in \n

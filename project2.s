@@ -28,7 +28,7 @@ ErrorEmpty:
 main:
   li $v0, 8
   la $a0, userInput
-  li $a1, 100
+  li $a1, 200
   syscall
 
 

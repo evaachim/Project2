@@ -1,10 +1,8 @@
 .data
-
-userInput: .space 20
-Error:  .asciiz "Input is too long"
-
-Prob: .asciiz "Invalid input in base-33"
-.text 
+   long:    .asciiz "Input is too long"
+  invalid: .asciiz "Invalid base-33 number."
+  empty:   .asciiz "Input is empty."
+  userInput:    .space  200
 
 main:
 

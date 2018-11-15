@@ -31,6 +31,11 @@ main:
   li $a1, 200
   syscall
 
+Rid:
+li $t9, 32 # space
+lb $t8, 0($a0)
+beq $t9, $t8, Character
+move $t8, $a0
 
 lb $s1, 1($a0)  #last digit
 lb $s2 2($a0)   #third

@@ -6,8 +6,9 @@
 
 
 .text
-ErrorEmpty:
-  la $a0, empty
+
+ErrorLong:
+  la $a0, long
   li $v0, 4
   syscall
   j end

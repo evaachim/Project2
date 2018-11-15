@@ -43,6 +43,10 @@ addi $a0, $a0, 1
 j Rid
 
 #takes care of length
+length:
+addi $t0, $t0, 0
+addi $t1, $t1, 10
+add $t2, $t2, $a0
 
 addi $t1, $zero, 10 #takes in \n
 addi $t7, $zero, 33   #gets value to multiply

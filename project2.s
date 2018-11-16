@@ -163,3 +163,7 @@ final:                  #final step, moves content to $a0 so it can be printed
 li $v0, 1
 move $a0, $t5
 syscall
+end:   #prints result
+#last system call of the program will end program
+ li $v0, 10
+ syscall

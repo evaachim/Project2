@@ -112,3 +112,7 @@ bne $t3, $zero, Mici #OK to go to conversion of lower characters if $t3 is not n
 Base: 
 addi $s7, $s7, -48  #conversion for regular numbers
 j row
+
+Mari:
+addi $s7, $s7, -55  #conversion for upper case
+j row

@@ -108,3 +108,7 @@ slti $t3, $s7, 88  #max for upper
 bne $t3, $zero, Mari  #OK to go to conversion of upper characters if $t3 is not null
 slti $t3, $s7, 120     #max for lower
 bne $t3, $zero, Mici #OK to go to conversion of lower characters if $t3 is not null
+
+Base: 
+addi $s7, $s7, -48  #conversion for regular numbers
+j row

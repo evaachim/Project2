@@ -97,5 +97,6 @@ li $s4, 3  #load immediate puts values in registers to be used
 li $s5, 2
 li $s6, 1
 li $s1, 0translate:
+translate:
 lb $s7, 0($a0)   #loads digits
 beqz $s7, final  #final conversion step

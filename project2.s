@@ -116,3 +116,6 @@ j row
 Mari:
 addi $s7, $s7, -55  #conversion for upper case
 j row
+
+Mici:
+addi $s7, $s7, -87  #conversion for lowe case

@@ -1,12 +1,11 @@
+############### Base 33 to Base 10 Converter ###################
 .data
   userInput:    .space  700
   empty:   .asciiz "Input is empty."
    long:    .asciiz "Input is too long."
   invalid: .asciiz "Invalid base-33 number."
 
-
 .text
-
 ErrorLong:
 #prints message for input that is too long
   la $a0, long
@@ -27,7 +26,6 @@ ErrorEmpty:
   li $v0, 4
   syscall
   j end
-
 
 main:
   li $v0, 8

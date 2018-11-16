@@ -70,6 +70,7 @@ lb $s3, 0($a0) #loads address here
 beqz $s3, initial  #go to initial step for conversion
 beq $s3, $t1, initial  #go to initial step for conversion
 slti $t3, $s3, 48                 #invalid for anything below 0
+bne $t3, $zero, ErrorInvalid
 
 blt $s2, $v0, Prob
 bgt $s2, $t3, Miu

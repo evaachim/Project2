@@ -134,3 +134,8 @@ add $t5, $t5, $t7
 addi $s0, $s0, -1
 addi $a0, $a0, 1
 j translate
+two:
+li $t6, 1089   #values to multiply by for the power of 2
+mult $s7, $t6
+mflo $t7
+add $t5, $t5, $t7

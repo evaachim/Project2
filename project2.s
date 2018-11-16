@@ -19,8 +19,9 @@ ErrorInvalid:
   j end
 
 
-ErrorEmpty:
-  la $a0, empty
+ErrorLong:
+#prints message for input that is too long
+  la $a0, long
   li $v0, 4
   syscall
   j end

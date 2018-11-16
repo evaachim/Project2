@@ -64,11 +64,6 @@ beqz $t4, ErrorLong #if it's too long, go to case for too long and print message
 move $a0, $t2
 j verify  #go to next verification process
 
-blt $s1, $v0, Tiu
-Tiu: bne $t1, Prob
-bgt $s1, $t3, Miu
-Miu: blt $s1, $t5, Prob
-bgt $s1, $s7, Prob
 
 blt $s2, $v0, Prob
 bgt $s2, $t3, Miu

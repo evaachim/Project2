@@ -84,7 +84,7 @@ slti $t3, $s3, 58                 #legal input for everything less than or equal
 bne $t3, $zero, Move
 slti $t3, $s3, 65                 #legal input for everything less than or equal to 65,  'a'
 bne $t3, $zero, Move
-slti $t3, $s3, 88                 #legal input for anything less than or equal to X
+slti $t3, $s3, 88                 #legal input for anything less than or equal to 88
 bne $t3, $zero, Move
 slti $t3, $s3, 97                 # invalid input, not numerical nor alphabetical
 bne $t3, $zero, ErrorInvalid
@@ -176,9 +176,9 @@ add $t5, $t5, $t7
 #no more need to go back to translation step
 
 
-final:                  #final step, moves content to $a0 so it can be printed
+final:                  #final step
 li $v0, 1
-move $a0, $t5
+move $a0, $t5  #moves content to $a0 so it can be printed
 syscall
 
 #last system call of the program will end program

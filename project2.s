@@ -105,3 +105,6 @@ beq $s7, $t1, final #if branch statement is true, move to final conversion state
 slti $t3, $s7, 58  #checks for less than or equal to 58
 bne $t3, $zero, Base  #OK to move forward if $t3 is not null
 slti $t3, $s7, 88  #max for upper
+bne $t3, $zero, Mari  #OK to go to conversion of upper characters if $t3 is not null
+slti $t3, $s7, 120     #max for lower
+bne $t3, $zero, Mici #OK to go to conversion of lower characters if $t3 is not null

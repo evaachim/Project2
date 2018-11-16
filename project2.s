@@ -96,7 +96,8 @@ addi $s0, $s0, -1 #decrement
 li $s4, 3  #load immediate puts values in registers to be used
 li $s5, 2
 li $s6, 1
-li $s1, 0translate:
+li $s1, 0
+
 translate:
 lb $s7, 0($a0)   #loads digits
 beqz $s7, final  #final conversion step

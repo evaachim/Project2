@@ -58,6 +58,8 @@ addi $t0, $t0, 1
 j traverse
 
 discovered: #busted empty space or input that violates limit
+beqz $t0, ErrorEmpty  #if it's empty go to case for empty which outputs error message
+slti $t4, $t0, 5
 
 blt $s1, $v0, Tiu
 Tiu: bne $t1, Prob

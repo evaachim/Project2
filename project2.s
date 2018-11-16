@@ -60,6 +60,7 @@ j traverse
 discovered: #busted empty space or input that violates limit
 beqz $t0, ErrorEmpty  #if it's empty go to case for empty which outputs error message
 slti $t4, $t0, 5
+beqz $t4, ErrorLong #if it's too long, go to case for too long and print message
 
 blt $s1, $v0, Tiu
 Tiu: bne $t1, Prob

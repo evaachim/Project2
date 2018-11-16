@@ -86,6 +86,8 @@ bgt $s3, 119, ErrorInvalid   # illegal input, out of range
 Move:  #now we iterate again, this time to check for invalid input
 addi $a0, $a0, 1 #iterates
 j verify #goes to verification point
+
+
 initial:  #first step of conversion, does the prerequisite work for translation into base 10
 move $a0, $t2  #moves content
 addi $t5, $t5, 0  #$t5 has 0 now

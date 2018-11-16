@@ -1,18 +1,21 @@
 .data
+#labels to be used to print error messages
   userInput:    .space  700
   empty:   .asciiz "Input is empty."
    long:    .asciiz "Input is too long."
   invalid: .asciiz "Invalid base-33 number."
 
-
 .text
+
 ErrorEmpty:
+#prints message for empty string
   la $a0, empty
   li $v0, 4
   syscall
   j end
 
 ErrorInvalid:
+#prints message for invalid input
   la $a0, invalid
   li $v0, 4
   syscall
@@ -33,6 +36,7 @@ main:
   syscall
 
 Rid:
+#takes care of leading spaces
 li $t9, 32 # space
 lb $t8, 0($a0)
 beq $t9, $t8, Character
@@ -128,6 +132,7 @@ beq $s0, $s6, three
 beq $s0, $s1, last
 
 one:
+#first character
 li $t6, 35937   #values to multiply by for the power of 3
 mult $s7, $t6
 mflo $t7
@@ -137,6 +142,7 @@ addi $a0, $a0, 1
 j translate
 
 two:
+#second character
 li $t6, 1089   #values to multiply by for the power of 2
 mult $s7, $t6
 mflo $t7
@@ -146,6 +152,7 @@ addi $a0, $a0, 1 #increment to move forward
 j translate
 
 three:
+#third character
 li $t6, 33   #values to multiply by for the power of 1
 mult $s7, $t6
 mflo $t7
@@ -154,6 +161,7 @@ addi $a0, $a0, 1
 j translate
 
 last:
+#fourth character
 li $t6, 1    #values to multiply by for the power of 0
 mult $s7, $t6
 mflo $t7
@@ -164,6 +172,7 @@ final:                  #final step, moves content to $a0 so it can be printed
 li $v0, 1
 move $a0, $t5
 syscall
+
 end:   #prints result
 #last system call of the program will end program
  li $v0, 10

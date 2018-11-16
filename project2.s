@@ -80,3 +80,5 @@ bne $t3, $zero, Move
 slti $t3, $s3, 97                 # invalid input, not numerical nor alphabetical
 bne $t3, $zero, ErrorInvalid
 slti $t3, $s3, 120                #legal input for lower case characters
+bne $t3, $zero, Move
+bgt $s3, 119, ErrorInvalid   # illegal input, out of range

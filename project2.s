@@ -157,3 +157,4 @@ li $t6, 1    #values to multiply by for the power of 0
 mult $s7, $t6
 mflo $t7
 add $t5, $t5, $t7 
+#no more need to go back to translation step

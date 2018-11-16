@@ -119,6 +119,7 @@ j row
 
 Mici:
 addi $s7, $s7, -87  #conversion for lowe caserow:  #determines which digit needs to be converted and goes to appropiate label
+row:  #determines which digit needs to be converted and goes to appropiate label
 beq $s0, $s4, one  #sequential checks 
 beq $s0, $s5, two
 beq $s0, $s6, three

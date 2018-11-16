@@ -64,6 +64,7 @@ beqz $t4, ErrorLong #if it's too long, go to case for too long and print message
 move $a0, $t2
 j verify  #go to next verification process
 
+#checks inputs
 verify:
 lb $s3, 0($a0) #loads address here
 beqz $s3, initial  #go to initial step for conversion

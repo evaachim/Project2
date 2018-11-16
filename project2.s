@@ -77,4 +77,5 @@ slti $t3, $s3, 65                 #legal input for everything less than or equal
 bne $t3, $zero, Move
 slti $t3, $s3, 88                 #legal input for anything less than or equal to the acii code 88
 bne $t3, $zero, Move
-  
+slti $t3, $s3, 97                 # invalid input, not numerical nor alphabetical
+bne $t3, $zero, ErrorInvalid

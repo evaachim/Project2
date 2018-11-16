@@ -91,3 +91,4 @@ j verify #goes to verification point
 initial:  #first step of conversion, does the prerequisite work for translation into base 10
 move $a0, $t2  #moves content
 addi $t5, $t5, 0  #$t5 has 0 now
+add $s0, $s0, $t0  

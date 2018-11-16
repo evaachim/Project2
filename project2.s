@@ -79,3 +79,4 @@ slti $t3, $s3, 88                 #legal input for anything less than or equal t
 bne $t3, $zero, Move
 slti $t3, $s3, 97                 # invalid input, not numerical nor alphabetical
 bne $t3, $zero, ErrorInvalid
+slti $t3, $s3, 120                #legal input for lower case characters

@@ -81,6 +81,8 @@ slti $t3, $s3, 97                 # invalid input, not numerical nor alphabetica
 bne $t3, $zero, ErrorInvalid
 slti $t3, $s3, 120                #legal input for lower case characters
 bne $t3, $zero, Move
+bgt $s3, 119, ErrorInvalid   # illegal input, out of range
+
 Move:  #now we iterate again, this time to check for invalid input
 addi $a0, $a0, 1 #iterates
 j verify #goes to verification point

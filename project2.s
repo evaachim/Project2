@@ -64,6 +64,11 @@ beqz $t4, ErrorLong #if it's too long, go to case for too long and print message
 move $a0, $t2
 j verify  #go to next verification process
 
+verify:
+lb $s3, 0($a0) #loads address here
+beqz $s3, initial  #go to initial step for conversion
+beq $s3, $t1, initial  #go to initial step for conversion
+slti $t3, $s3, 48                 #invalid for anything below 0
 
 blt $s2, $v0, Prob
 bgt $s2, $t3, Miu

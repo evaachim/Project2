@@ -92,3 +92,4 @@ initial:  #first step of conversion, does the prerequisite work for translation 
 move $a0, $t2  #moves content
 addi $t5, $t5, 0  #$t5 has 0 now
 add $s0, $s0, $t0  
+addi $s0, $s0, -1 #decrement	

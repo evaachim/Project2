@@ -75,36 +75,7 @@ bne $t3, $zero, ErrorInvalid
 
 
 
-blt $s2, $v0, Prob
-bgt $s2, $t3, Miu
-Miu: blt $s2, $t5, Prob
-bgt $s2, $s7, Prob
 
-blt $s3, $v0, Prob
-bgt $s3, $t3, Miu
-Miu: blt $s3, $t5, Prob
-bgt $s3, $s7, Prob
-
-blt $s4, $v0,Tiu
-Tiu: bne $t1, Prob
-bgt $s4, $t3, Miu
-Miu: blt $s4, $t5, Prob
-bgt $s1, $s7, Prob
-
-bne $t0, $t1, Error
-beq $t0, $t1, Label1
-
-blt $s1, $t2, L1
-bge $s1, $t2, Else
-Else: blt $s1, $t5, L2
-bgt $s1, $t6, L3
-
-L1: 
-    addi $s1, $s1, -48  #subtracts 48 from $s1 which is 48 to get int  from 0 to 9 
-L2: 
-    addi $s1, $s1, -55 #gets values from 10 to 33
-L3: 
-    addi $s1, $s1, -87  #gets values from 10 to 33 for small caps
 
 blt $s2, $t2, L4
 bge $s2, $t2, Other

@@ -141,4 +141,7 @@ mflo $t7
 add $t5, $t5, $t7
 addi $s0, $s0, -1 #decrement
 addi $a0, $a0, 1 #increment to move forward
-j translate
+j translatethree:
+li $t6, 33   #values to multiply by for the power of 1
+mult $s7, $t6
+mflo $t7

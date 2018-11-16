@@ -157,7 +157,8 @@ li $t6, 1    #values to multiply by for the power of 0
 mult $s7, $t6
 mflo $t7
 add $t5, $t5, $t7 
-#no more need to go back to translation stepfinal:                  #final step, moves content to $a0 so it can be printed
+#no more need to go back to translation step
+
 final:                  #final step, moves content to $a0 so it can be printed
 li $v0, 1
 move $a0, $t5

@@ -137,19 +137,10 @@ beq $s0, $s5, two
 beq $s0, $s6, three
 beq $s0, $s1, last
 
-#first character
-one:
-li $t6, 35937   #values to multiply by for the power of 3
-mult $s7, $t6
-mflo $t7
-add $t5, $t5, $t7
-addi $s0, $s0, -1
-addi $a0, $a0, 1
-j translate
 
-#second character
-two:
-li $t6, 1089   #values to multiply by for the power of 2
+#fourth character
+last:
+li $t6, 1    #values to multiply by for the power of 0
 mult $s7, $t6
 mflo $t7
 add $t5, $t5, $t7
@@ -167,9 +158,19 @@ addi $s0, $s0, -1
 addi $a0, $a0, 1
 j translate
 
-#fourth character
-last:
-li $t6, 1    #values to multiply by for the power of 0
+#second character
+two:
+li $t6, 1089   #values to multiply by for the power of 2
+mult $s7, $t6
+mflo $t7
+add $t5, $t5, $t7
+addi $s0, $s0, -1
+addi $a0, $a0, 1
+j translate
+
+#first character
+one:
+li $t6, 35937   #values to multiply by for the power of 3
 mult $s7, $t6
 mflo $t7
 add $t5, $t5, $t7
